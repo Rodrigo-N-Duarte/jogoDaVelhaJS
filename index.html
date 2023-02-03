@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+    <title>Jogo da Velha</title>
+</head>
+
+<body>
+    <div class="gameBody">
+        <table class="gameTable">
+            <tr>
+                <th onclick="jogoDaVelha(1)"><img src="" id="block1" ></th>
+                <th class="center" style="border-top: none;" onclick="jogoDaVelha(2)"><img src="" id="block2" ></th>
+                <th onclick="jogoDaVelha(3)"><img src="" id="block3"></th>
+            </tr>
+            <tr>
+                <th class="center" style="border-left: none;" onclick="jogoDaVelha(4)"><img src="" id="block4"></th>
+                <th class="center" style="border: none;" onclick="jogoDaVelha(5)"><img src="" id="block5"></th>
+                <th class="center" style="border-right: none;" onclick="jogoDaVelha(6)"><img src=""  id="block6"></th>
+            </tr>
+            <tr>
+                <th onclick="jogoDaVelha(7)"><img src="" id="block7"></th>
+                <th class="center" style="border-bottom: none;" onclick="jogoDaVelha(8)"><img src="" id="block8"></th>
+                <th onclick="jogoDaVelha(9)"><img src="" id="block9"></th>
+            </tr>
+        </table>
+    </div>
+
+    <button class="btnPlayAgain">Click to Play Again or press Space</button>
+    
+</body>
+
+</html>
