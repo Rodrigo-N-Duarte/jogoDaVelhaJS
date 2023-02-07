@@ -24,25 +24,24 @@ function mark(id, player) {
 }
 
 const result = () => { // lógica funcional, porém pode ser otimizada em menos linhas de código
-  let block1 = getBlock(1), block2 = getBlock(2), block3 = getBlock(3), block4 = getBlock(4), 
-  block5 = getBlock(5), block6 = getBlock(6), block7 = getBlock(7), block8 = getBlock(8), block9 = getBlock(9)
+  let blocks = [9]
+  for (let i = 1; i <= 9; i++)
+  blocks[i] = document.querySelector(`#block${i}`).getAttribute('src')
 
-    comparision(block1,block2,block3)
-    comparision(block4,block5,block6)
-    comparision(block7,block8,block9)
-    comparision(block1,block4,block7)
-    comparision(block2,block5,block8)
-    comparision(block3,block6,block9)
-    comparision(block1,block5,block9)
-    comparision(block3,block5,block7)
-}
-function getBlock(id){
-  return document.querySelector(`#block${id}`).getAttribute('src')
+  // testa todas as possiveis combinações de fim de jogo
+  comparision(blocks[1], blocks[2], blocks[3])
+  comparision(blocks[4], blocks[5], blocks[6])
+  comparision(blocks[7], blocks[8], blocks[9])
+  comparision(blocks[1], blocks[4], blocks[7])
+  comparision(blocks[2], blocks[5], blocks[8])
+  comparision(blocks[3], blocks[6], blocks[9])
+  comparision(blocks[1], blocks[5], blocks[9])
+  comparision(blocks[3], blocks[5], blocks[7])
 }
 
-function comparision(a,b,c){
+function comparision(a, b, c) {
   if (a == b && a == c && a != "")
-  gameOver()
+    gameOver()
 }
 
 
